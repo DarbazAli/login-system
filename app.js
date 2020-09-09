@@ -17,11 +17,19 @@ app.set('view-engine', 'ejs');
 
 // SETUP HOME ROUTE
 app.route('/').get((req, res) => {
-    res.render('index.ejs', {name: 'Darbaz'})
+    res.render('index.ejs', {name: 'Darbaz', title: 'Home'})
 })
 
+app.route('/login')
+    .get((req, res) => {
+        res.render('login.ejs')
+    })
 
 
+app.route('/register')
+    .get((req, res) => {
+        res.render('register.ejs')
+    })
 
 
 /*======================================================== 
