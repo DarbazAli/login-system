@@ -6,12 +6,18 @@ const app = express();
 
 
 /*======================================================== 
+    MIDLLEWARES
+========================================================*/
+app.set('view-engine', 'ejs');
+
+
+/*======================================================== 
     APP SCRIPT - START
 ========================================================*/
 
 // SETUP HOME ROUTE
 app.route('/').get((req, res) => {
-        res.send('Hello world')
+    res.render('index.ejs', {name: 'Darbaz'})
 })
 
 
