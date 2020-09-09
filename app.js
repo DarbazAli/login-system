@@ -22,13 +22,13 @@ app.route('/').get((req, res) => {
 
 app.route('/login')
     .get((req, res) => {
-        res.render('login.ejs')
+        res.render('login.ejs', {title: 'Login'})
     })
 
 
 app.route('/register')
     .get((req, res) => {
-        res.render('register.ejs')
+        res.render('register.ejs', {title: 'Register'})
     })
 
 
